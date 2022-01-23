@@ -1,0 +1,223 @@
+:root {
+  --font: 'Lato', sans-serif;
+
+  --darkGray: #4A4A4A;
+  --mediumGray: #959595;
+  --lightGray: #F2F2F2;
+  --purple: #8C52FF;
+}
+
+body {
+  background-color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font);
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+}
+
+input, button, select, textarea {
+  -webkit-appearance: none;
+  outline: none;
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none; 
+  outline: none;
+  background: none;
+  padding: 0;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.layerContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: none!important;
+  pointer-events: none;
+  z-index: 99;
+}
+
+.modal { 
+  max-height: 700px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  pointer-events: all;
+  overflow: hidden;
+  border-radius: 35px;
+  padding: 4rem 8rem 1.5rem 8rem;
+  text-align: center;
+  display: none;
+  background-image: url(images/wave_bg.png);
+  background-repeat: no-repeat;
+  background-size: 120% 70%;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.modal-header {
+  color: var(--purple);
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.modal-subheader {
+  font-weight: 900;
+  max-width: 350px;
+  font-size: 2rem;
+}
+
+.share-msg {
+  max-width: 280px;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.saved-hours {
+  color: var(--purple);
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.social-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.social-icon img {
+  height: 100%;
+  width: 100%;
+}
+
+.shine-star1 {
+  height: 60px;
+  position: absolute;
+  top: 4.5rem; 
+  right: 2rem;
+}
+
+.shine-star2 {
+  height: 20px;
+  position: absolute;
+  top: 10rem; 
+  left: 1rem;
+}
+
+.close-btn {
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.close-btn svg {
+  color: var(--mediumGray);
+}
+
+.wave-bg {
+  height: 60%;
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media (max-width: 1100px) {
+  .modal {
+    padding: 3rem 5rem 1.5rem 5rem;
+    background-size: 150% 70%;
+  }
+
+  .modal-header {
+    font-size: 2rem;
+  }
+  
+  .modal-subheader {
+    font-weight: 900;
+    max-width: 350px;
+    font-size: 1.7rem;
+  }
+  
+  .share-msg {
+    max-width: 280px;
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+
+  .shine-star1, .shine-star2 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 3rem 2rem 1.5rem 2rem;
+    background-size: 150% 70%;
+  }
+
+  .modal-header {
+    font-size: 1.6rem;
+  }
+  
+  .modal-subheader {
+    font-weight: 900;
+    max-width: 350px;
+    font-size: 1.2rem;
+  }
+  
+  .share-msg {
+    max-width: 280px;
+    font-size: .8rem;
+    padding: 1rem 0;
+  }
+
+  .shine-star1, .shine-star2 {
+    display: none;
+  }
+}

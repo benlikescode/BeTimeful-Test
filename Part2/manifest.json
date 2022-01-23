@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "BeTimeful",
+  "version": "1.0",
+
+  "description": "Limit your time on social media",
+  
+  "author": "Ben Hoeg",
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html",
+    "default_title": "BeTimeful"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
